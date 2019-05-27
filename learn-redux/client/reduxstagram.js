@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 
 // Components
-import { Main } from "./components/Main";
+import { ConnectedMain } from "./components/App";
 
 // Redux store
 import { store } from "./store";
@@ -17,8 +17,9 @@ import "./styles/style.styl";
 const rootElement = document.querySelector("#root")
 const router = (
   <Provider store={store}>
-    <BrowserRouter>
-      <Main />
+    <BrowserRouter history={history}>
+      {/* <Main /> now has access to the redux store! */}
+      <ConnectedMain />
     </BrowserRouter>
   </Provider>
 )

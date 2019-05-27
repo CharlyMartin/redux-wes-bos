@@ -13,6 +13,10 @@ const defaultState = {
   posts
 }
 
+// By combining the store, everytime an action is dispatch
+// every single reducer function is going to run.
+// Then it's up to each recuder to do something with the action or not,
+// as in, if the action type matches, then it will do something.
 const store = createStore(rootReducer, defaultState);
 
 export { store };

@@ -7,12 +7,12 @@ function incrementLikes(postId) {
 }
 
 // Decrement Likes
-function decrementLikes(postId) {
-  return {
-    type: 'DECREMENT_LIKES',
-    postId
-  }
-}
+// function decrementLikes(postId) {
+//   return {
+//     type: 'DECREMENT_LIKES',
+//     postId
+//   }
+// }
 
 // Add Comment
 function addComment(postId, author, Comment) {
@@ -33,5 +33,4 @@ function removeComment(postId, commentId) {
   }
 }
 
-// Change Location (React Router)
-export { incrementLikes, decrementLikes, addComment, removeComment }
+export { incrementLikes, addComment, removeComment }

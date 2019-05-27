@@ -1,5 +1,5 @@
 function commentsReducer(state = [], action) {
-  console.log(state, action);
+  console.log("comments are being modified");
   return state;
 }
 
