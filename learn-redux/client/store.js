@@ -6,7 +6,7 @@ import comments from "./data/comments";
 import posts from "./data/posts";
 
 // Reducers
-import rootReducer from "./reducers/index";
+import { rootReducer } from "./reducers/index";
 
 const defaultState = {
   comments,
