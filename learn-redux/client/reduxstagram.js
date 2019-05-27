@@ -1,9 +1,20 @@
-// let's go!
+// Packages
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
-console.log("Hello from the console!");
+// Components
+import { Main } from "./components/Main";
+
+// CSS
+import "./styles/style.styl";
+
 
 const rootElement = document.querySelector("#root")
-ReactDOM.render(<h1>Hello</h1>, rootElement);
+const router = (
+  <BrowserRouter>
+    <Main />
+  </BrowserRouter>
+)
 
+render(router, rootElement);
