@@ -1,9 +1,10 @@
 import React from "react";
+import { Card } from "./Card";
 
-function PhotoGrid() {
+function PhotoGrid(props) {
   return (
     <div className="photo-grid">
-      I'm the photo grid;
+      {props.posts.map((post, i) => <Card />)}
     </div>
   )
 }

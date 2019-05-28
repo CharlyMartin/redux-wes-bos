@@ -6,7 +6,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import { PhotoGrid } from "./PhotoGrid";
 import { Single } from "./Single";
 
-function Main() {
+function Main(props) {
   return (
     <div>
       <h1>
@@ -14,7 +14,7 @@ function Main() {
       </h1>
 
       <Switch>
-        <Route path="/" exact component={PhotoGrid} />
+        <Route path="/" exact component={() => <PhotoGrid {...props}/>} />
         <Route path="/view/:id" component={Single} />
       </Switch>
     </div>
